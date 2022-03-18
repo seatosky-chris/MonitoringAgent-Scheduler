@@ -8,7 +8,7 @@ namespace MonitoringAgent.Scheduler
     public static class MonitoringAgent_Scheduler
     {
         [Function("MonitoringAgent_Scheduler")]
-        public static void Run([TimerTrigger("0 17,22 * * * 1-5")] MyInfo myTimer, FunctionContext context)
+        public static void Run([TimerTrigger("0 0 17,22 * * 1-5")] MyInfo myTimer, FunctionContext context)
         {
             var logger = context.GetLogger("MonitoringAgent_Scheduler");
             logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
